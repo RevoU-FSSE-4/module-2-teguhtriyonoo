@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "kodemono";
+    src: url("./KodeMono-VariableFont_wght.ttf");
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: gray;
+}
+
+body {
+    font-family: "kodemono";
+    margin: 0px;
+}
+nav {
+    display: block;
+    position: sticky;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    border-bottom: 2px solid black;
+}
+nav span img {
+    height: 50px;
+    width: auto;
+    padding: 6px;
+}
+.relative-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 0px;
+}
+
+#home {
+    display: block;
+    border: 2px;
+    border-radius: 6px;
+}
+#contac {
+    display: block;
+    border: 2px;
+    border-radius: 6px;
+}
+#aboutus {
+    display: block;
+    border: 2px;
+    border-radius: 6px;
+}
+
+#header {
+    text-align: center;
+    color: rgb(11, 12, 11);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+    background-image: url(./asset/backgorund.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header h1 {
+    font-weight: bold;
+    margin: 15px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    text-shadow: 1.5px 1.5px;
+}
+@keyframes slidein {
+    0% {
+        margin-left: 100%;
+        width: 300%;
+    }
+    100% {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+ol {
+    list-style: armenian;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    /*grid-auto-flow: column dense;*/
+}
+
+.grid-item {
+    display: flex;
+    background-color: rgba(102, 127, 241, 0.5);
+    border: 2px solid rgb(73, 73, 236);
+    border-radius: 5px;
+}
+img {
+    border-radius: 2px;
+    width: 100%;
+    display: flex;
+}
+
+#one {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+#two {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+#three {
+    grid-column: 3 / span 2;
+    grid-row: 3;
+}
+
+.adaptif-picture {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid rgb(73, 73, 236);
+    border-radius: 6px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+form {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    width: 80%;
+}
+.button {
+    transition: width 2s, height 4s;
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        background-image: url(https://th.bing.com/th/id/R.7bd79689608d8b064549b4058efbd73d?rik=14PWhVmgT5qsqQ&riu=http%3a%2f%2fdata.1freewallpapers.com%2fdownload%2flandscapes-skylines-fields-farms-desktop-background-images.jpg&ehk=TQzoWKl4uDgBqZsTVHClO3IDB%2bxi5tee5RE7O%2bl1G1I%3d&risl=&pid=ImgRaw&r=0);
+        background-position: top center;
+        background-size: cover;
+    }
+}
