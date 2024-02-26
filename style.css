@@ -64,7 +64,7 @@ nav span img {
 
 #header {
     text-align: center;
-    color: rgb(11, 12, 11);
+    color: tomato;
     height: 320px;
     display: flex;
     flex-direction: column;
@@ -76,11 +76,15 @@ nav span img {
     background-repeat: no-repeat;
 }
 header h1 {
-    font-weight: bold;
+    font-weight: 900;
     margin: 15px;
     animation-duration: 3s;
     animation-name: slidein;
-    text-shadow: 1.5px 1.5px;
+    text-shadow: 0 0 10px #ff0000, 0 0 10px #0000ff;
+}
+
+header p {
+    text-shadow: 0 0 10px #faef53, 0 0 10px #6666e6;
 }
 @keyframes slidein {
     0% {
@@ -100,18 +104,18 @@ h2 {
     margin-bottom: 2px;
 }
 ol {
-    list-style: armenian;
+    list-style: georgian;
+    list-style-position: initial;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 5px;
     margin-left: 10%;
     margin-right: 10%;
-
-    /*grid-auto-flow: column dense;*/
+    grid-auto-flow: row dense;
 }
 
 .grid-item {
@@ -123,7 +127,6 @@ ol {
 img {
     border-radius: 2px;
     width: 100%;
-    display: flex;
 }
 
 #one {
@@ -132,11 +135,32 @@ img {
 }
 #two {
     grid-column: 1 / span 2;
-    grid-row: 3;
+    grid-row: 3 / span 1;
 }
 #three {
     grid-column: 3 / span 2;
-    grid-row: 3;
+    grid-row: 3 span 2;
+}
+
+#four {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+#five {
+    grid-column: 2 / span 1;
+    grid-row: 4 span 1;
+}
+#six {
+    grid-column: 3 / span 1;
+    grid-row: 4 span 1;
+}
+#seven {
+    grid-column: 4 / span 2;
+    grid-row: 4 / span 1;
+}
+#eight {
+    grid-column: 1 / span 2;
+    grid-row: 3 span 2;
 }
 
 .adaptif-picture {
@@ -162,9 +186,14 @@ form {
     margin-right: 10%;
     justify-content: center;
     width: 80%;
+    align-items: center;
 }
 .button {
-    transition: width 2s, height 4s;
+    width: 60px;
+    transition: ease-out;
+}
+.button:hover {
+    width: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -172,5 +201,44 @@ form {
         background-image: url(https://th.bing.com/th/id/R.7bd79689608d8b064549b4058efbd73d?rik=14PWhVmgT5qsqQ&riu=http%3a%2f%2fdata.1freewallpapers.com%2fdownload%2flandscapes-skylines-fields-farms-desktop-background-images.jpg&ehk=TQzoWKl4uDgBqZsTVHClO3IDB%2bxi5tee5RE7O%2bl1G1I%3d&risl=&pid=ImgRaw&r=0);
         background-position: top center;
         background-size: cover;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        gap: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+        grid-auto-flow: row dense;
+    }
+
+    #one {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+    #two {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #three {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+    }
+
+    #four {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+    #five {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+    #six {
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 1;
+    }
+    #seven {
+        grid-column: 1 / span 2;
+        grid-row: 5 / span 1;
     }
 }
